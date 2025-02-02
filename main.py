@@ -64,8 +64,8 @@ def answer(call):
     if call.data == 'Browlball':
         markup7 = types.InlineKeyboardMarkup()
         btn13 = types.InlineKeyboardButton(text='Трипл-дриблинг', callback_data='Td')
-        btn14 = types.InlineKeyboardButton(text='Beach Ball', callback_data='BB')
-        btn15 = types.InlineKeyboardButton(text='Backyard Bowl', callback_data='BBowl;')
+        btn14 = types.InlineKeyboardButton(text='Дворовый чемпионат', callback_data='BB')
+        btn15 = types.InlineKeyboardButton(text='Пляжный воллейбол', callback_data='BBowl;')
         markup7.add(btn13)
         markup7.add(btn14)
         markup7.add(btn15)
@@ -79,6 +79,22 @@ def answer(call):
         markup8.add(btn16)
         caption = '1)правый фланг:Мортис левый фланг:рико мид:Фрэнк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup8)
+
+    if call.data == 'BB':
+        markup9 = types.InlineKeyboardMarkup()
+        btn17 = types.InlineKeyboardButton(text='Назад', callback_data='Back')
+        file = open('Бэкбол.jpg', 'rb')
+        markup9.add(btn17)
+        caption = '1)правый фланг:белль левый фланг:Мортис мид:рико'
+        bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup9)
+
+    if call.data == 'BBowl;':
+        markup10 = types.InlineKeyboardMarkup()
+        btn18 = types.InlineKeyboardButton(text='Назад', callback_data='Back')
+        file = open('Вол.jpg', 'rb')
+        markup10.add(btn18)
+        caption = '1)правый фланг:базз левый фланг:меллоди мид:динамайк'
+        bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup10)
         
     
     
