@@ -8,13 +8,19 @@
 
 
 # Запуск бота
-- `https://web.telegram.org/k/#@Romagokmonsterbot`
+- `t.me/Romagokmonsterbot`
+
+# Установка
 - Установить версию Python 3.13     `https://www.python.org/downloads/release/python-3130/`
   ''при установке Python нажать галочку на установку PYTH''
 - Установить telebot     `pip install pyTelegramBotAPI`
 - Скачать папку pic и поместить в одну папку с main.py
 - Вставить Ваш BOT_API     `https://t.me/BotFather`
 - Запустить бота через main.py
+
+# Технологии
+- Telebot
+- replyKeyboard
 
 
 ## Команды бота
