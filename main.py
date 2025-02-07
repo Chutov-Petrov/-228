@@ -31,7 +31,7 @@ def answer(call):
         markup2.add(btn2, btn3, btn4)
         bot.send_message(call.message.chat.id, 'Выберите режим:', reply_markup=markup2)
 
-    
+#Захват кристалов
     if call.data == 'Gems':
         markup3 = types.InlineKeyboardMarkup()
         btn5 = types.InlineKeyboardButton(text='Роковая шахта', callback_data='RockMine')
@@ -67,7 +67,7 @@ def answer(call):
         caption = '1)правый фланг:Кольт левый фланг:Джесси мид:Поко 2)правый фланг:Кольт левый фланг:Джесси мид:Мортис 3)первый фланг:Кольт левый фланг:Эдгар мид:Джесси'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup6)
 
-    
+#Броулбол
     if call.data == 'Browlball':
         markup7 = types.InlineKeyboardMarkup()
         btn13 = types.InlineKeyboardButton(text='Трипл-дриблинг', callback_data='Td')
@@ -103,7 +103,7 @@ def answer(call):
         caption = '1)правый фланг:базз левый фланг:меллоди мид:динамайк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup10)
 
-
+#Ограбление
     if call.data == 'Ograb':
         markup11 = types.InlineKeyboardMarkup()
         btn19 = types.InlineKeyboardButton(text='Надёжное укрытие', callback_data='Ty')
@@ -139,40 +139,8 @@ def answer(call):
         caption = '1)правый фланг:Ворон левый фланг:рико мид:Фрэнк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup14)
         
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     elif call.data == 'Back':  
         bot.edit_message_text(call.message.chat.id, call.message.message_id, reply_markup=start(call.message))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 storage = dict()
 
