@@ -6,8 +6,8 @@ BOT_API = '7862542822:AAHZb98VPleLDePavpNbLvpQNHEGXbJ9I04'
 
 bot = telebot.TeleBot(BOT_API)
 
-
 @bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['Help'])
 
 def start(message):
     markup = types.InlineKeyboardMarkup()
@@ -15,6 +15,11 @@ def start(message):
     markup.add(btn1)
     file = open('превью.jpg', 'rb')
     bot.send_photo(message.chat.id, file, reply_markup=markup)
+
+def Help(message):
+    markup = types.InlineKeyboardMarkup()
+    caption = ''
+    bot.send_massage(message.chat.id, reply_markup=markup)
 
 @bot.callback_query_handler(func = lambda call:True)
 def answer(call):
