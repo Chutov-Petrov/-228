@@ -137,7 +137,7 @@ def answer(call):
     if call.data == 'Bo':
         markup14 = types.InlineKeyboardMarkup()
         btn25 = types.InlineKeyboardButton(text='Назад', callback_data='Back')
-        file = open('Ty.jpg', 'rb')
+        file = open('Bo.jpg', 'rb')
         markup14.add(btn25)
         caption = '1)правый фланг:Ворон левый фланг:рико мид:Фрэнк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup14)
