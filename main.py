@@ -20,9 +20,12 @@ def Help(message):
     markup = types.InlineKeyboardMarkup()
     caption = 'Бот помогает новичкам и олдам собрать своих персонажей для максимального импакта для актуальной версии игры. Позволяет выбрать карту и озакомиться с выбором персонажа для выбранной карты. Указаны наилучшие комбинации бойцов для выбранных вами карт.'
     bot.send_massage(message.chat.id, caption, reply_markup=markup)
+    btn26 = types.InlineKeyboardButton(text='Назад', callback_data='Back')
 
 @bot.callback_query_handler(func = lambda call:True)
 def answer(call):
+
+#Выбор режима
     if call.data == 'BS':
         markup2 = types.InlineKeyboardMarkup()
         btn2 = types.InlineKeyboardButton(text='Захват кристаллов', callback_data='Gems')
