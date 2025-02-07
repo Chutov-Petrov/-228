@@ -18,8 +18,8 @@ def start(message):
 
 def Help(message):
     markup = types.InlineKeyboardMarkup()
-    caption = ''
-    bot.send_massage(message.chat.id, reply_markup=markup)
+    caption = 'Бот помогает новичкам и олдам собрать своих персонажей для максимального импакта для актуальной версии игры. Позволяет выбрать карту и озакомиться с выбором персонажа для выбранной карты. Указаны наилучшие комбинации бойцов для выбранных вами карт.'
+    bot.send_massage(message.chat.id, caption, reply_markup=markup)
 
 @bot.callback_query_handler(func = lambda call:True)
 def answer(call):
