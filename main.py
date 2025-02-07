@@ -26,6 +26,7 @@ def answer(call):
         markup2.add(btn2, btn3, btn4)
         bot.send_message(call.message.chat.id, 'Выберите режим:', reply_markup=markup2)
 
+    
     if call.data == 'Gems':
         markup3 = types.InlineKeyboardMarkup()
         btn5 = types.InlineKeyboardButton(text='Роковая шахта', callback_data='RockMine')
@@ -61,6 +62,7 @@ def answer(call):
         caption = '1)правый фланг:Кольт левый фланг:Джесси мид:Поко 2)правый фланг:Кольт левый фланг:Джесси мид:Мортис 3)первый фланг:Кольт левый фланг:Эдгар мид:Джесси'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup6)
 
+    
     if call.data == 'Browlball':
         markup7 = types.InlineKeyboardMarkup()
         btn13 = types.InlineKeyboardButton(text='Трипл-дриблинг', callback_data='Td')
@@ -95,6 +97,42 @@ def answer(call):
         markup10.add(btn18)
         caption = '1)правый фланг:базз левый фланг:меллоди мид:динамайк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup10)
+
+
+    if call.data == 'Ograb':
+        markup11 = types.InlineKeyboardMarkup()
+        btn19 = types.InlineKeyboardButton(text='Надёжное укрытие', callback_data='Ty')
+        btn20 = types.InlineKeyboardButton(text='Горячая кукуруза', callback_data='Gk')
+        btn21 = types.InlineKeyboardButton(text='Большое озеро', callback_data='Bo')
+        markup11.add(btn19)
+        markup11.add(btn20)
+        markup11.add(btn21)
+        bot.send_message(call.message.chat.id, 'Выберите карту', reply_markup=markup11)
+        btn22 = types.InlineKeyboardButton(text='Назад', callback_data='Back')
+
+    if call.data == 'Ty':
+        markup12 = types.InlineKeyboardMarkup()
+        btn23 = types.InlineKeyboardButton(text='Назад', callback_data='Back')
+        file = open('Ty.jpg', 'rb')
+        markup12.add(btn23)
+        caption = '1)правый фланг:Мортис левый фланг:Гейл мид:Фрэнк'
+        bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup12)
+
+    if call.data == 'Gk':
+        markup13 = types.InlineKeyboardMarkup()
+        btn24 = types.InlineKeyboardButton(text='Назад', callback_data='Back')
+        file = open('Gk.jpg', 'rb')
+        markup13.add(btn24)
+        caption = '1)правый фланг:Мортис левый фланг:Кольт мид:Динамайк'
+        bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup13)
+
+    if call.data == 'Bo':
+        markup14 = types.InlineKeyboardMarkup()
+        btn25 = types.InlineKeyboardButton(text='Назад', callback_data='Back')
+        file = open('Ty.jpg', 'rb')
+        markup14.add(btn25)
+        caption = '1)правый фланг:Ворон левый фланг:рико мид:Фрэнк'
+        bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup14)
         
     
     
