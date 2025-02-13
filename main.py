@@ -52,7 +52,7 @@ def answer(call):
     
     if call.data == 'RockMine':
         markup4 = types.InlineKeyboardMarkup()
-        btn7 = types.InlineKeyboardButton(text='Назад', callback_data='back_map_gems')
+        btn7 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('к.jpg', 'rb')
         markup4.add(btn7)
         caption = ' 1)правый фланг: Рико левый фланг:Мр. П. мид:Пайпер 2)правый фланг:Рико. левый фланг:Пайпер мид:Мортис. 3)правый фланг:Брок левый фланг:Эдгар мид:8-Бит'
@@ -60,7 +60,7 @@ def answer(call):
 
     if call.data == 'CArcade':
         markup5 = types.InlineKeyboardMarkup()
-        btn10 = types.InlineKeyboardButton(text='Назад', callback_data='back_map_gems')
+        btn10 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('аркада.jpg', 'rb')
         markup5.add(btn10)
         caption = '1)правый фланг:Поко левый фланг:Роза мид:Тара  2)правый фланг:Джесси левый фланг:Нита мид:Поко 3)правый фланг:Джесси левый фланг:Мортис мид:Поко'
@@ -68,7 +68,7 @@ def answer(call):
 
     if call.data == 'PZ':
         markup6 = types.InlineKeyboardMarkup()
-        btn11 = types.InlineKeyboardButton(text='Назад', callback_data='back_map_gems')
+        btn11 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('западня.jpg', 'rb')
         markup6.add(btn11)
         caption = '1)правый фланг:Кольт левый фланг:Джесси мид:Поко 2)правый фланг:Кольт левый фланг:Джесси мид:Мортис 3)первый фланг:Кольт левый фланг:Эдгар мид:Джесси'
@@ -80,7 +80,7 @@ def answer(call):
         btn13 = types.InlineKeyboardButton(text='Трипл-дриблинг', callback_data='Td')
         btn14 = types.InlineKeyboardButton(text='Дворовый чемпионат', callback_data='BB')
         btn15 = types.InlineKeyboardButton(text='Пляжный воллейбол', callback_data='BBowl;')
-        btn_backbb = types.InlineKeyboardButton(text='Назад',callback_data = 'back_rezhim')
+        btn_backbb = types.InlineKeyboardButton(text='Назад',callback_data = 'BS')
         markup7.add(btn13)
         markup7.add(btn14)
         markup7.add(btn15)
@@ -89,7 +89,7 @@ def answer(call):
 
     if call.data == 'Td':
         markup8 = types.InlineKeyboardMarkup()
-        btn16 = types.InlineKeyboardButton(text='Назад', callback_data='back_bb_map')
+        btn16 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('Пляж.jpg', 'rb')
         markup8.add(btn16)
         caption = '1)правый фланг:Мортис левый фланг:рико мид:Фрэнк'
@@ -97,7 +97,7 @@ def answer(call):
 
     if call.data == 'BB':
         markup9 = types.InlineKeyboardMarkup()
-        btn17 = types.InlineKeyboardButton(text='Назад', callback_data='back_bb_map')
+        btn17 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('Бэкбол.jpg', 'rb')
         markup9.add(btn17)
         caption = '1)правый фланг:белль левый фланг:Мортис мид:рико'
@@ -105,7 +105,7 @@ def answer(call):
 
     if call.data == 'BBowl;':
         markup10 = types.InlineKeyboardMarkup()
-        btn18 = types.InlineKeyboardButton(text='Назад', callback_data='back_bb_map')
+        btn18 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('Вол.jpg', 'rb')
         markup10.add(btn18)
         caption = '1)правый фланг:базз левый фланг:меллоди мид:динамайк'
@@ -117,7 +117,7 @@ def answer(call):
         btn19 = types.InlineKeyboardButton(text='Надёжное укрытие', callback_data='Ty')
         btn20 = types.InlineKeyboardButton(text='Горячая кукуруза', callback_data='Gk')
         btn21 = types.InlineKeyboardButton(text='Большое озеро', callback_data='Bo')
-        btn_backog = types.InlineKeyboardButton(text='Назад', callback_data='back_rezhim')
+        btn_backog = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         markup11.add(btn19)
         markup11.add(btn20)
         markup11.add(btn21)
@@ -126,7 +126,7 @@ def answer(call):
 
     if call.data == 'Ty':
         markup12 = types.InlineKeyboardMarkup()
-        btn23 = types.InlineKeyboardButton(text='Назад', callback_data='back_map_og')
+        btn23 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('Ty.jpg', 'rb')
         markup12.add(btn23)
         caption = '1)правый фланг:Мортис левый фланг:Гейл мид:Фрэнк'
@@ -134,7 +134,7 @@ def answer(call):
 
     if call.data == 'Gk':
         markup13 = types.InlineKeyboardMarkup()
-        btn24 = types.InlineKeyboardButton(text='Назад', callback_data='back_map_og')
+        btn24 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('Gk.jpg', 'rb')
         markup13.add(btn24)
         caption = '1)правый фланг:Мортис левый фланг:Кольт мид:Динамайк'
@@ -142,7 +142,7 @@ def answer(call):
 
     if call.data == 'Bo':
         markup14 = types.InlineKeyboardMarkup()
-        btn25 = types.InlineKeyboardButton(text='Назад', callback_data='back_map_og')
+        btn25 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('Bo.jpg', 'rb')
         markup14.add(btn25)
         caption = '1)правый фланг:Ворон левый фланг:рико мид:Фрэнк'
@@ -194,14 +194,9 @@ def answer(call):
         btn2 = types.InlineKeyboardButton(text='Захват кристаллов', callback_data='Gems')
         btn3 = types.InlineKeyboardButton(text='Броулбол', callback_data='Browlball')
         btn4 = types.InlineKeyboardButton(text='Ограбление', callback_data='Ograb')
-        btn_BSback = types.InlineKeyboardButton(text='Назад', callback_data='Back')
-        markup2.add(btn2, btn3, btn4, btn_BSback)
+        markup2.add(btn2, btn3, btn4)
         bot.send_message(call.message.chat.id, 'Выберите режим:', reply_markup=markup2)
         
-
-
-    
-
 storage = dict()
 
 def init_storage(user_id):
