@@ -33,30 +33,38 @@ def answer(call):
         btn2 = types.InlineKeyboardButton(text='Захват кристаллов', callback_data='Gems')
         btn3 = types.InlineKeyboardButton(text='Броулбол', callback_data='Browlball')
         btn4 = types.InlineKeyboardButton(text='Ограбление', callback_data='Ograb')
-        btn4 = types.InlineKeyboardButton(text='Одиночное столкновение...', callback_data='shd')
         btn_BSback = types.InlineKeyboardButton(text='Назад', callback_data='Back')
         markup2.add(btn2, btn3, btn4, btn_BSback)
-        bot.send_message(call.message.chat.id, 'Выберите режим:', reply_markup=markup2)
+        bot.send_message(call.message.chat.id, 'Выберите режим: \nПеред вами представленно 3 режима: \n-Захват кристалов - цель: захватить 10 кристалов и удержать 15 секунд \n-Броулбол - футбол \n-Ограбление - сломать вражеский сейф', reply_markup=markup2)
 
 #Захват кристалов
     if call.data == 'Gems':
         markup3 = types.InlineKeyboardMarkup()
+        btn10 = types.InlineKeyboardButton(text='О режиме', callback_data='help_gems')
         btn5 = types.InlineKeyboardButton(text='Роковая шахта', callback_data='RockMine')
         btn8 = types.InlineKeyboardButton(text='Кристальная аркада', callback_data='CArcade')
         btn9 = types.InlineKeyboardButton(text='Поганковая запядня', callback_data='PZ')
         btn_backgems = types.InlineKeyboardButton(text='Назад', callback_data='back_rezhim')
+        markup3.add(btn10)
         markup3.add(btn5)
         markup3.add(btn8)
         markup3.add(btn9)
         markup3.add(btn_backgems)
         bot.send_message(call.message.chat.id, 'Выберите карту', reply_markup=markup3)
+
+    if call.data == 'help_gems':
+        markup19 = types.InlineKeyboardMarkup()
+        btn7 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
+        markup19.add(btn7)
+        caption = 'Первый режим, который доступен новичкам. Соревнуются две команды, по три человека в каждой. Главная цель — собрать на команду 10 и более кристаллов, а затем удержать их в течение 15 секунд. Отсчёт времени начнётся заново, если количество вражеских кристаллов упадёт до 9 и менее.'
+        bot.send_message(call.message.chat.id, caption, reply_markup=markup19)
     
     if call.data == 'RockMine':
         markup4 = types.InlineKeyboardMarkup()
         btn7 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('к.jpg', 'rb')
         markup4.add(btn7)
-        caption = ' 1)правый фланг: Рико левый фланг:Мр. П. мид:Пайпер 2)правый фланг:Рико. левый фланг:Пайпер мид:Мортис. 3)правый фланг:Брок левый фланг:Эдгар мид:8-Бит'
+        caption = 'Правый фланг:Рико \nЛевый фланг:Мр. П. \nМид:Пайпер'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup4)
 
     if call.data == 'CArcade':
@@ -82,11 +90,16 @@ def answer(call):
         btn14 = types.InlineKeyboardButton(text='Дворовый чемпионат', callback_data='BB')
         btn15 = types.InlineKeyboardButton(text='Пляжный воллейбол', callback_data='BBowl;')
         btn_backbb = types.InlineKeyboardButton(text='Назад',callback_data = 'BS')
-        markup7.add(btn13)
-        markup7.add(btn14)
-        markup7.add(btn15)
-        markup7.add(btn_backbb)
+        btn16 = types.InlineKeyboardButton(text='О режиме',callback_data = 'help_BB')
+        markup7.add(btn16, btn13, btn14, btn15, btn_backbb,)
         bot.send_message(call.message.chat.id, 'Выберите карту', reply_markup=markup7)
+
+    if call.data == 'help_BB':
+        markup19 = types.InlineKeyboardMarkup()
+        btn7 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
+        markup19.add(btn7)
+        caption = 'Режим «Броулбол» в игре Brawl Stars работает так: в турнире участвуют две команды по три игрока в каждой. Цель — доставить мяч (который начинается в середине) к воротам противоположной команды и забить гол.'
+        bot.send_message(call.message.chat.id, caption, reply_markup=markup19)
 
     if call.data == 'Td':
         markup8 = types.InlineKeyboardMarkup()
@@ -118,12 +131,17 @@ def answer(call):
         btn19 = types.InlineKeyboardButton(text='Надёжное укрытие', callback_data='Ty')
         btn20 = types.InlineKeyboardButton(text='Горячая кукуруза', callback_data='Gk')
         btn21 = types.InlineKeyboardButton(text='Большое озеро', callback_data='Bo')
+        btn22 = types.InlineKeyboardButton(text='О режиме', callback_data='piska')
         btn_backog = types.InlineKeyboardButton(text='Назад', callback_data='BS')
-        markup11.add(btn19)
-        markup11.add(btn20)
-        markup11.add(btn21)
-        markup11.add(btn_backog)
+        markup11.add(btn22, btn19, btn20, btn21, btn_backog)
         bot.send_message(call.message.chat.id, 'Выберите карту', reply_markup=markup11)
+
+    if call.data == 'piska':
+        markup20 = types.InlineKeyboardMarkup()
+        btn7 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
+        markup20.add(btn7)
+        caption = 'В ограблении есть две команды, каждая из которых состоит из трёх игроков. На обеих сторонах карты есть сейф с 45 000 очками здоровья. Цель состоит в том, чтобы сламать вражеский сейф'
+        bot.send_message(call.message.chat.id, caption, reply_markup=markup20)    
 
     if call.data == 'Ty':
         markup12 = types.InlineKeyboardMarkup()
@@ -159,44 +177,38 @@ def answer(call):
         bot.send_photo(call.message.chat.id, file, reply_markup=markup)
     
     elif call.data == 'back_map_gems':
-        markup3 = types.InlineKeyboardMarkup()
+        markup15 = types.InlineKeyboardMarkup()
         btn5 = types.InlineKeyboardButton(text='Роковая шахта', callback_data='RockMine')
         btn8 = types.InlineKeyboardButton(text='Кристальная аркада', callback_data='CArcade')
         btn9 = types.InlineKeyboardButton(text='Поганковая запядня', callback_data='PZ')
-        markup3.add(btn5)
-        markup3.add(btn8)
-        markup3.add(btn9)
-        bot.send_message(call.message.chat.id, 'Выберите карту', reply_markup=markup3)
+        markup15.add(btn5, btn8, btn9)
+        bot.send_message(call.message.chat.id, 'Выберите карту', reply_markup=markup15)
         btn6 = types.InlineKeyboardButton(text='Назад', callback_data='back_map_gems')
 
     elif call.data == 'back_bb_map':
-        markup7 = types.InlineKeyboardMarkup()
+        markup16 = types.InlineKeyboardMarkup()
         btn13 = types.InlineKeyboardButton(text='Трипл-дриблинг', callback_data='Td')
         btn14 = types.InlineKeyboardButton(text='Дворовый чемпионат', callback_data='BB')
         btn15 = types.InlineKeyboardButton(text='Пляжный воллейбол', callback_data='BBowl;')
-        markup7.add(btn13)
-        markup7.add(btn14)
-        markup7.add(btn15)
+        markup16.add(btn13, btn14, btn15)
         bot.send_message(call.message.chat.id, 'Выберите карту', reply_markup=markup7)
         btn12 = types.InlineKeyboardButton(text='Назад', callback_data='Back')
 
     elif call.data == 'back_map_og':
-        markup11 = types.InlineKeyboardMarkup()
+        markup17 = types.InlineKeyboardMarkup()
         btn19 = types.InlineKeyboardButton(text='Надёжное укрытие', callback_data='Ty')
         btn20 = types.InlineKeyboardButton(text='Горячая кукуруза', callback_data='Gk')
         btn21 = types.InlineKeyboardButton(text='Большое озеро', callback_data='Bo')
-        markup11.add(btn19)
-        markup11.add(btn20)
-        markup11.add(btn21)
+        markup17.add(btn19, btn20, btn21)
         bot.send_message(call.message.chat.id, 'Выберите карту', reply_markup=markup11)
 
     elif call.data == 'back_rezhim':
-        markup2 = types.InlineKeyboardMarkup()
+        markup18 = types.InlineKeyboardMarkup()
         btn2 = types.InlineKeyboardButton(text='Захват кристаллов', callback_data='Gems')
         btn3 = types.InlineKeyboardButton(text='Броулбол', callback_data='Browlball')
         btn4 = types.InlineKeyboardButton(text='Ограбление', callback_data='Ograb')
-        markup2.add(btn2, btn3, btn4)
-        bot.send_message(call.message.chat.id, 'Выберите режим:', reply_markup=markup2)
+        markup18.add(btn2, btn3, btn4)
+        bot.send_message(call.message.chat.id, 'Выберите режим:', reply_markup=markup18)
         
 storage = dict()
 
