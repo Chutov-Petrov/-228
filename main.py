@@ -33,6 +33,7 @@ def answer(call):
         btn2 = types.InlineKeyboardButton(text='Захват кристаллов', callback_data='Gems')
         btn3 = types.InlineKeyboardButton(text='Броулбол', callback_data='Browlball')
         btn4 = types.InlineKeyboardButton(text='Ограбление', callback_data='Ograb')
+        btn4 = types.InlineKeyboardButton(text='Одиночное столкновение...', callback_data='shd')
         btn_BSback = types.InlineKeyboardButton(text='Назад', callback_data='Back')
         markup2.add(btn2, btn3, btn4, btn_BSback)
         bot.send_message(call.message.chat.id, 'Выберите режим:', reply_markup=markup2)
