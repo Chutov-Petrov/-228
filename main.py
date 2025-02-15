@@ -64,7 +64,7 @@ def answer(call):
         btn7 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('к.jpg', 'rb')
         markup4.add(btn7)
-        caption = 'Правый фланг:Рико \nЛевый фланг:Мр. П. \nМид:Пайпер'
+        caption = 'Правый фланг: Рико \nЛевый фланг: Мр. П. \nМид: Пайпер'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup4)
 
     if call.data == 'CArcade':
@@ -72,7 +72,7 @@ def answer(call):
         btn10 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('аркада.jpg', 'rb')
         markup5.add(btn10)
-        caption = '1)правый фланг:Поко левый фланг:Роза мид:Тара  2)правый фланг:Джесси левый фланг:Нита мид:Поко 3)правый фланг:Джесси левый фланг:Мортис мид:Поко'
+        caption = 'Правый фланг: Поко \nЛевый фланг: Роза \nМид: Тара'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup5)
 
     if call.data == 'PZ':
@@ -80,7 +80,7 @@ def answer(call):
         btn11 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('западня.jpg', 'rb')
         markup6.add(btn11)
-        caption = '1)правый фланг:Кольт левый фланг:Джесси мид:Поко 2)правый фланг:Кольт левый фланг:Джесси мид:Мортис 3)первый фланг:Кольт левый фланг:Эдгар мид:Джесси'
+        caption = 'Правый фланг: Кольт \nЛевый фланг: Джесси \nМид: Поко'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup6)
 
 #Броулбол
@@ -106,7 +106,7 @@ def answer(call):
         btn16 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('Пляж.jpg', 'rb')
         markup8.add(btn16)
-        caption = '1)правый фланг:Мортис левый фланг:рико мид:Фрэнк'
+        caption = 'Правый фланг: Мортис \nЛевый фланг: Рико \nМид: Фрэнк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup8)
 
     if call.data == 'BB':
@@ -114,7 +114,7 @@ def answer(call):
         btn17 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('Бэкбол.jpg', 'rb')
         markup9.add(btn17)
-        caption = '1)правый фланг:белль левый фланг:Мортис мид:рико'
+        caption = 'Правый фланг: Белль \nЛевый фланг: Мортис \nМид: Рико'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup9)
 
     if call.data == 'BBowl;':
@@ -122,7 +122,7 @@ def answer(call):
         btn18 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('Вол.jpg', 'rb')
         markup10.add(btn18)
-        caption = '1)правый фланг:базз левый фланг:меллоди мид:динамайк'
+        caption = 'Правый фланг: Базз \nЛевый фланг: Меллоди \nМид: Динамайк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup10)
 
 #Ограбление
@@ -148,7 +148,7 @@ def answer(call):
         btn23 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('Ty.jpg', 'rb')
         markup12.add(btn23)
-        caption = '1)правый фланг:Мортис левый фланг:Гейл мид:Фрэнк'
+        caption = 'Правый фланг: Мортис \nЛевый фланг: Гейл \nМид: Фрэнк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup12)
 
     if call.data == 'Gk':
@@ -156,7 +156,7 @@ def answer(call):
         btn24 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('Gk.jpg', 'rb')
         markup13.add(btn24)
-        caption = '1)правый фланг:Мортис левый фланг:Кольт мид:Динамайк'
+        caption = 'Правый фланг: Мортис \nЛевый фланг:Кольт \nМид: Динамайк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup13)
 
     if call.data == 'Bo':
@@ -164,7 +164,7 @@ def answer(call):
         btn25 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
         file = open('Bo.jpg', 'rb')
         markup14.add(btn25)
-        caption = '1)правый фланг:Ворон левый фланг:рико мид:Фрэнк'
+        caption = 'Правый фланг: Ворон \nЛевый фланг: Рико \nМид: Фрэнк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup14)
 
  
