@@ -13,7 +13,7 @@ def start(message):
     btn1 = types.InlineKeyboardButton(text='Гайды по бравл старс', callback_data='BS')
     btn_help = types.InlineKeyboardButton(text='О боте', callback_data='help')
     markup.add(btn1, btn_help)
-    file = open('превью.jpg', 'rb')
+    file = open('images/превью.jpg', 'rb')
     bot.send_photo(message.chat.id, file, reply_markup=markup)
 
 @bot.callback_query_handler(func = lambda call:True)
@@ -62,7 +62,7 @@ def answer(call):
     if call.data == 'RockMine':
         markup4 = types.InlineKeyboardMarkup()
         btn7 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
-        file = open('к.jpg', 'rb')
+        file = open('images/к.jpg', 'rb')
         markup4.add(btn7)
         caption = 'Правый фланг: Рико \nЛевый фланг: Мр. П. \nМид: Пайпер'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup4)
@@ -70,7 +70,7 @@ def answer(call):
     if call.data == 'CArcade':
         markup5 = types.InlineKeyboardMarkup()
         btn10 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
-        file = open('аркада.jpg', 'rb')
+        file = open('images/аркада.jpg', 'rb')
         markup5.add(btn10)
         caption = 'Правый фланг: Поко \nЛевый фланг: Роза \nМид: Тара'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup5)
@@ -78,7 +78,7 @@ def answer(call):
     if call.data == 'PZ':
         markup6 = types.InlineKeyboardMarkup()
         btn11 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
-        file = open('западня.jpg', 'rb')
+        file = open('images/западня.jpg', 'rb')
         markup6.add(btn11)
         caption = 'Правый фланг: Кольт \nЛевый фланг: Джесси \nМид: Поко'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup6)
@@ -104,7 +104,7 @@ def answer(call):
     if call.data == 'Td':
         markup8 = types.InlineKeyboardMarkup()
         btn16 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
-        file = open('Пляж.jpg', 'rb')
+        file = open('images/Пляж.jpg', 'rb')
         markup8.add(btn16)
         caption = 'Правый фланг: Мортис \nЛевый фланг: Рико \nМид: Фрэнк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup8)
@@ -112,7 +112,7 @@ def answer(call):
     if call.data == 'BB':
         markup9 = types.InlineKeyboardMarkup()
         btn17 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
-        file = open('Бэкбол.jpg', 'rb')
+        file = open('images/Бэкбол.jpg', 'rb')
         markup9.add(btn17)
         caption = 'Правый фланг: Белль \nЛевый фланг: Мортис \nМид: Рико'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup9)
@@ -120,7 +120,7 @@ def answer(call):
     if call.data == 'BBowl;':
         markup10 = types.InlineKeyboardMarkup()
         btn18 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
-        file = open('Вол.jpg', 'rb')
+        file = open('images/Вол.jpg', 'rb')
         markup10.add(btn18)
         caption = 'Правый фланг: Базз \nЛевый фланг: Меллоди \nМид: Динамайк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup10)
@@ -146,7 +146,7 @@ def answer(call):
     if call.data == 'Ty':
         markup12 = types.InlineKeyboardMarkup()
         btn23 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
-        file = open('Ty.jpg', 'rb')
+        file = open('images/Ty.jpg', 'rb')
         markup12.add(btn23)
         caption = 'Правый фланг: Мортис \nЛевый фланг: Гейл \nМид: Фрэнк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup12)
@@ -154,7 +154,7 @@ def answer(call):
     if call.data == 'Gk':
         markup13 = types.InlineKeyboardMarkup()
         btn24 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
-        file = open('Gk.jpg', 'rb')
+        file = open('images/Gk.jpg', 'rb')
         markup13.add(btn24)
         caption = 'Правый фланг: Мортис \nЛевый фланг:Кольт \nМид: Динамайк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup13)
@@ -162,7 +162,7 @@ def answer(call):
     if call.data == 'Bo':
         markup14 = types.InlineKeyboardMarkup()
         btn25 = types.InlineKeyboardButton(text='Назад', callback_data='BS')
-        file = open('Bo.jpg', 'rb')
+        file = open('images/Bo.jpg', 'rb')
         markup14.add(btn25)
         caption = 'Правый фланг: Ворон \nЛевый фланг: Рико \nМид: Фрэнк'
         bot.send_photo(call.message.chat.id, file, caption, reply_markup=markup14)
@@ -173,7 +173,7 @@ def answer(call):
         btn1 = types.InlineKeyboardButton(text='Гайды по бравл старс', callback_data='BS')
         btn_help = types.InlineKeyboardButton(text='О боте', callback_data='help')
         markup.add(btn1, btn_help)
-        file = open('превью.jpg', 'rb')
+        file = open('images/превью.jpg', 'rb')
         bot.send_photo(call.message.chat.id, file, reply_markup=markup)
     
     elif call.data == 'back_map_gems':
