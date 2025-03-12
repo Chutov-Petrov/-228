@@ -1,3 +1,5 @@
+# Cсылка на бота: @Romagokmonsterbot
+
 # Помощник Кольт
 Гайд по игре Brawl Stars
 
